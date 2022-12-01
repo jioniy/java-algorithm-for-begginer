@@ -8,7 +8,6 @@ public class Main {
 	
 	public String mySolution(int num, String s) {
 		String answer = "";
-		char tmp;
 		s=s.replaceAll("\\#", "1");
 		s=s.replaceAll("\\*", "0");
 
