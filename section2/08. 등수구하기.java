@@ -8,13 +8,11 @@ import java.util.Scanner;
  *
  */
 public class Main {
-	public int[] solution(int n, int[] arr) {
+	public int[] mySolution(int n, int[] arr) {
 		int[] answer = new int[n];
 
-		int target = 0;
 		for(int i=0;i<n;i++) {
 			answer[i]+=1;
-			target = arr[i];
 			for(int j =0;j<n;j++) {
 				if(i==j) {
 					continue;
@@ -33,6 +31,21 @@ public class Main {
 
 		return answer;
 	}
+	
+	public int[] solution(int n, int[] arr) {
+		int[] answer = new int[n];
+		
+		for(int i =0;i<n;i++) {
+			int cnt = 1;
+			for(int j =0;j<n;j++) {
+				if(arr[j]>arr[i]) cnt++;
+			}
+			answer[i] = cnt;
+		}
+		
+		return answer;
+	}
+	
 	public static void main(String[] args) {
 		Main T = new Main();
 
